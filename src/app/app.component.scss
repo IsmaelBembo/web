@@ -1,0 +1,13 @@
+// @import '~@fortawesome/fontawesome-free/css/all.css';
+
+/* Add any additional custom styles here */
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.backdrop-filter {
+  backdrop-filter: blur(8px);
+}
+
+/* You may need to add more custom styles or override Tailwind classes as needed */
