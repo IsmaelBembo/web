@@ -12,7 +12,6 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    
   ],
   animations: [
     trigger('fadeInOut', [
@@ -40,8 +39,8 @@ export class LandingComponent implements OnInit {
   ];
 
   skills = [
-    'JavaScript', 'Python', 'Java', 'C#', 'React', 'Node.js', 'AWS', 'Azure',
-    'Docker', 'Kubernetes', 'GraphQL', 'MongoDB', 'PostgreSQL', 'Redis', 'CI/CD', 'Agile'
+    'Angular', 'JavaScript', 'Python', 'Java', 'React', 'Node.js', 'Google Cloud', 'Firebase',
+    'Docker', 'GraphQL', 'MongoDB', 'MySQL', 'CI/CD', 'Agile'
   ];
 
   pricingPlans = [
@@ -51,7 +50,7 @@ export class LandingComponent implements OnInit {
       description: 'Perfect for small projects and startups',
       features: [
         'Custom software development',
-        'Basic web application',
+        'Basic web application or solution',
         '1 month of support',
         '1 revision'
       ],
@@ -63,7 +62,7 @@ export class LandingComponent implements OnInit {
       description: 'Ideal for growing businesses',
       features: [
         'Advanced software development',
-        'Complex web application',
+        'Complex web application or solution',
         'Database design & optimization',
         '3 months of support',
         '3 revisions'
@@ -121,6 +120,13 @@ export class LandingComponent implements OnInit {
     if (this.contactForm.valid) {
       console.log('Form submitted:', this.contactForm.value);
       this.contactForm.reset();
+    }
+  }
+
+  scrollToSection(section: string){
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   }
 }
